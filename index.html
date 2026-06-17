@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Powered Predictive Maintenance of DC Motor — Machine Learning Based Early Fault Detection Using Vibration Sensor Data">
+  <title>AI Powered Predictive Maintenance of DC Motor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-3" aria-hidden="true"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">MotorAI</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#description" class="nav-link">Description</a>
+        <a href="#highlights" class="nav-link">Highlights</a>
+        <a href="#users" class="nav-link">Users</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#results" class="nav-link">Results</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#future" class="nav-link">Future</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-glow" id="hero-glow" aria-hidden="true"></div>
+      <div class="hero-container">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            B.Tech AIML · Predictive Maintenance
+          </div>
+          <h1 class="hero-title">
+            <span class="gradient-text">AI Powered Predictive</span>
+            <span>Maintenance of DC Motor</span>
+          </h1>
+          <p class="hero-subtitle">Machine Learning Based Early Fault Detection Using Vibration Sensor Data</p>
+          <p class="hero-description">
+            An intelligent machine learning system that monitors vibration patterns and predicts DC motor failures before breakdown occurs, reducing downtime and improving operational efficiency.
+          </p>
+          <div class="hero-actions">
+            <a href="#description" class="btn btn-primary">
+              <span>Explore Project</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-glow"></div>
+            <img src="healthy-vs-faulty.jpg" alt="Healthy vs Faulty DC Motor Comparison" class="hero-image">
+            <div class="hero-image-overlay"></div>
+          </div>
+          <div class="floating-card floating-card-1">
+            <span class="fc-icon">✓</span>
+            <div>
+              <strong>NORMAL</strong>
+              <span>Motor Healthy</span>
+            </div>
+          </div>
+          <div class="floating-card floating-card-2">
+            <span class="fc-icon fc-warn">!</span>
+            <div>
+              <strong>ABOUT_TO_FAIL</strong>
+              <span>Early Detection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator"></div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Team</span>
+          <h2 class="section-title">Meet the <span class="gradient-text">Innovators</span></h2>
+          <p class="section-desc">The minds behind intelligent motor fault detection</p>
+        </div>
+        <div class="team-grid">
+          <article class="glass-card team-card reveal">
+            <div class="team-avatar">ST</div>
+            <h3>Shambhavi Terdal</h3>
+            <p class="team-prn">PRN: SCFU425054</p>
+            <div class="team-glow"></div>
+          </article>
+          <article class="glass-card team-card reveal reveal-delay-1">
+            <div class="team-avatar">RS</div>
+            <h3>Rida Satkhed</h3>
+            <p class="team-prn">PRN: SCFU425056</p>
+            <div class="team-glow"></div>
+          </article>
+          <article class="glass-card team-card reveal reveal-delay-2">
+            <div class="team-avatar">RD</div>
+            <h3>Rafa Dange</h3>
+            <p class="team-prn">PRN: SCFU425058</p>
+            <div class="team-glow"></div>
+          </article>
+        </div>
+        <div class="mentor-banner glass-card reveal">
+          <div class="mentor-info">
+            <span class="mentor-label">Mentor</span>
+            <h3>Preethi Baligar</h3>
+          </div>
+          <div class="mentor-divider"></div>
+          <div class="mentor-info">
+            <span class="mentor-label">Program</span>
+            <h3>B.Tech AIML</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="section section-alt" id="description">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-content reveal">
+            <span class="section-tag">Overview</span>
+            <h2 class="section-title">Project <span class="gradient-text">Description</span></h2>
+            <p class="split-text">
+              Predictive Maintenance of DC Motor is an AI-powered fault detection system using vibration sensor data and Support Vector Machine (SVM) classification to detect motor failures before breakdown.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="fl-icon">📡</span>
+                <div>
+                  <strong>Vibration Sensing</strong>
+                  <p>Continuous monitoring via accelerometer sensors</p>
+                </div>
+              </li>
+              <li>
+                <span class="fl-icon">🧠</span>
+                <div>
+                  <strong>SVM Classification</strong>
+                  <p>Intelligent pattern recognition for fault states</p>
+                </div>
+              </li>
+              <li>
+                <span class="fl-icon">⚙️</span>
+                <div>
+                  <strong>Proactive Maintenance</strong>
+                  <p>Prevent breakdowns before they occur</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="split-visual reveal reveal-delay-2">
+            <div class="image-frame">
+              <div class="image-frame-glow"></div>
+              <img src="hardware-setup.jpg" alt="Hardware Setup for DC Motor Monitoring" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section" id="highlights">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Highlights</span>
+          <h2 class="section-title">Project <span class="gradient-text">Highlights</span></h2>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card glass-card reveal">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <h3>Real-Time Monitoring</h3>
+            <p>Continuous vibration data acquisition and analysis</p>
+          </article>
+          <article class="stat-card glass-card reveal reveal-delay-1">
+            <div class="stat-icon">🤖</div>
+            <div class="stat-number" data-target="3" data-suffix="+">0</div>
+            <h3>Machine Learning</h3>
+            <p>Multiple ML models for robust classification</p>
+          </article>
+          <article class="stat-card glass-card reveal reveal-delay-2">
+            <div class="stat-icon">🔍</div>
+            <div class="stat-number" data-target="95" data-suffix="%">0</div>
+            <h3>Early Fault Detection</h3>
+            <p>Identify failures before catastrophic breakdown</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Users -->
+    <section class="section section-alt" id="users">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Applications</span>
+          <h2 class="section-title">Potential <span class="gradient-text">Users</span></h2>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <article class="user-card glass-card reveal">
+            <div class="user-icon">🏭</div>
+            <h3>Manufacturing Industries</h3>
+            <p>Prevent production line downtime with predictive motor health monitoring</p>
+            <div class="card-shine"></div>
+          </article>
+          <article class="user-card glass-card reveal reveal-delay-1">
+            <div class="user-icon">🌾</div>
+            <h3>Agricultural Pump Motors</h3>
+            <p>Ensure reliable irrigation systems through early fault detection</p>
+            <div class="card-shine"></div>
+          </article>
+          <article class="user-card glass-card reveal reveal-delay-2">
+            <div class="user-icon">🤖</div>
+            <h3>Robotics Applications</h3>
+            <p>Maintain optimal performance in automated robotic systems</p>
+            <div class="card-shine"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="section" id="workflow">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Process</span>
+          <h2 class="section-title">System <span class="gradient-text">Workflow</span></h2>
+        </div>
+        <div class="workflow-layout">
+          <div class="workflow-visual reveal">
+            <div class="image-frame">
+              <img src="workflow.jpg" alt="System Workflow Diagram" loading="lazy">
+            </div>
+          </div>
+          <div class="timeline reveal reveal-delay-2">
+            <div class="timeline-item">
+              <div class="timeline-marker"><span>01</span></div>
+              <div class="timeline-content glass-card">
+                <h3>Data Collection</h3>
+                <p>Vibration signals captured from DC motor via sensor hardware</p>
+              </div>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-item">
+              <div class="timeline-marker"><span>02</span></div>
+              <div class="timeline-content glass-card">
+                <h3>Feature Extraction</h3>
+                <p>Statistical features computed from raw vibration data</p>
+              </div>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-item">
+              <div class="timeline-marker"><span>03</span></div>
+              <div class="timeline-content glass-card">
+                <h3>SVM Classification</h3>
+                <p>Machine learning model classifies motor health status</p>
+              </div>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-item">
+              <div class="timeline-marker"><span>04</span></div>
+              <div class="timeline-content glass-card">
+                <h3>Maintenance Action</h3>
+                <p>Timely intervention based on predicted fault conditions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software -->
+    <section class="section section-alt" id="software">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Tools</span>
+          <h2 class="section-title">Software <span class="gradient-text">Used</span></h2>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <article class="tool-card glass-card reveal">
+            <div class="tool-logo">M</div>
+            <h3>MATLAB</h3>
+            <p>Data analysis, feature extraction, and model training</p>
+          </article>
+          <article class="tool-card glass-card reveal reveal-delay-1">
+            <div class="tool-logo">A</div>
+            <h3>Arduino IDE</h3>
+            <p>Microcontroller programming for sensor data acquisition</p>
+          </article>
+          <article class="tool-card glass-card reveal reveal-delay-2">
+            <div class="tool-logo">ML</div>
+            <h3>Machine Learning Toolbox</h3>
+            <p>SVM, Decision Tree, and Ensemble model implementation</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ML Models -->
+    <section class="section" id="models">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">AI Models</span>
+          <h2 class="section-title">Machine Learning <span class="gradient-text">Models</span></h2>
+        </div>
+        <div class="cards-grid cards-grid-3">
+          <article class="model-card glass-card reveal">
+            <div class="model-badge">Model 01</div>
+            <h3>Decision Tree</h3>
+            <p>Rule-based classification for interpretable fault detection</p>
+            <div class="model-bar"><div class="model-bar-fill" style="--fill: 78%"></div></div>
+          </article>
+          <article class="model-card glass-card reveal reveal-delay-1">
+            <div class="model-badge model-badge-primary">Primary</div>
+            <h3>Support Vector Machine (SVM)</h3>
+            <p>High-accuracy classification with optimal decision boundary</p>
+            <div class="model-bar"><div class="model-bar-fill" style="--fill: 95%"></div></div>
+          </article>
+          <article class="model-card glass-card reveal reveal-delay-2">
+            <div class="model-badge">Model 03</div>
+            <h3>Ensemble Learning</h3>
+            <p>Combined models for improved prediction reliability</p>
+            <div class="model-bar"><div class="model-bar-fill" style="--fill: 88%"></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dataset Features -->
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Data</span>
+          <h2 class="section-title">Dataset <span class="gradient-text">Features</span></h2>
+          <p class="section-desc">Extracted statistical features from vibration sensor signals</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-item glass-card reveal"><span class="fi-label">Mean</span><span class="fi-value">μ</span></div>
+          <div class="feature-item glass-card reveal reveal-delay-1"><span class="fi-label">Standard Deviation</span><span class="fi-value">σ</span></div>
+          <div class="feature-item glass-card reveal reveal-delay-2"><span class="fi-label">Maximum Value</span><span class="fi-value">Max</span></div>
+          <div class="feature-item glass-card reveal"><span class="fi-label">Minimum Value</span><span class="fi-value">Min</span></div>
+          <div class="feature-item glass-card reveal reveal-delay-1"><span class="fi-label">RMS</span><span class="fi-value">RMS</span></div>
+          <div class="feature-item glass-card reveal reveal-delay-2"><span class="fi-label">Spike Count</span><span class="fi-value">SC</span></div>
+          <div class="feature-item glass-card reveal feature-item-wide"><span class="fi-label">Peak-to-Mean Ratio</span><span class="fi-value">PMR</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Outcomes</span>
+          <h2 class="section-title">Project <span class="gradient-text">Results</span></h2>
+        </div>
+        <div class="results-layout">
+          <div class="results-content reveal">
+            <div class="success-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Model Trained Successfully</span>
+            </div>
+            <p class="results-text">
+              The trained Support Vector Machine model successfully classifies motor conditions into <strong>NORMAL</strong> and <strong>ABOUT_TO_FAIL</strong> categories using extracted vibration features.
+            </p>
+            <div class="results-metrics">
+              <div class="metric">
+                <span class="metric-value gradient-text">SVM</span>
+                <span class="metric-label">Primary Classifier</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value gradient-text">2</span>
+                <span class="metric-label">Output Classes</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value gradient-text">7</span>
+                <span class="metric-label">Features Used</span>
+              </div>
+            </div>
+          </div>
+          <div class="results-visual reveal reveal-delay-2">
+            <div class="image-frame image-frame-glow">
+              <img src="matlab-result.jpg" alt="MATLAB Classification Results" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Healthy vs Faulty -->
+    <section class="section section-alt" id="comparison">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Analysis</span>
+          <h2 class="section-title">Healthy vs <span class="gradient-text">Faulty</span></h2>
+        </div>
+        <div class="comparison-layout">
+          <div class="comparison-visual reveal">
+            <div class="image-frame">
+              <img src="motor-condition.jpg" alt="Motor Condition Comparison" loading="lazy">
+            </div>
+          </div>
+          <div class="comparison-cards reveal reveal-delay-2">
+            <article class="comparison-card comparison-healthy glass-card">
+              <div class="comp-header">
+                <span class="comp-dot comp-dot-green"></span>
+                <h3>Healthy Motor</h3>
+              </div>
+              <ul>
+                <li>Stable vibration patterns</li>
+                <li>Low amplitude oscillations</li>
+                <li>Consistent frequency spectrum</li>
+                <li>Classified as <strong>NORMAL</strong></li>
+              </ul>
+            </article>
+            <article class="comparison-card comparison-faulty glass-card">
+              <div class="comp-header">
+                <span class="comp-dot comp-dot-red"></span>
+                <h3>Faulty Motor</h3>
+              </div>
+              <ul>
+                <li>Irregular vibration spikes</li>
+                <li>Elevated amplitude levels</li>
+                <li>Anomalous frequency components</li>
+                <li>Classified as <strong>ABOUT_TO_FAIL</strong></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="section" id="challenges">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Journey</span>
+          <h2 class="section-title">Challenges <span class="gradient-text">Faced</span></h2>
+        </div>
+        <div class="challenges-timeline">
+          <div class="challenge-item reveal">
+            <div class="challenge-number">01</div>
+            <div class="challenge-content glass-card">
+              <h3>Collecting Accurate Faulty Motor Data</h3>
+              <p>Obtaining reliable fault-state vibration samples required controlled failure simulation</p>
+            </div>
+          </div>
+          <div class="challenge-item reveal reveal-delay-1">
+            <div class="challenge-number">02</div>
+            <div class="challenge-content glass-card">
+              <h3>Dataset Imbalance</h3>
+              <p>Healthy samples significantly outnumbered faulty samples, requiring careful model tuning</p>
+            </div>
+          </div>
+          <div class="challenge-item reveal reveal-delay-2">
+            <div class="challenge-number">03</div>
+            <div class="challenge-content glass-card">
+              <h3>Sensor Noise</h3>
+              <p>Environmental interference affected raw signal quality and feature reliability</p>
+            </div>
+          </div>
+          <div class="challenge-item reveal">
+            <div class="challenge-number">04</div>
+            <div class="challenge-content glass-card">
+              <h3>Feature Extraction Challenges</h3>
+              <p>Identifying the most discriminative features from high-dimensional vibration data</p>
+            </div>
+          </div>
+          <div class="challenge-item reveal reveal-delay-1">
+            <div class="challenge-number">05</div>
+            <div class="challenge-content glass-card">
+              <h3>Prediction Errors</h3>
+              <p>Minimizing false positives and false negatives in classification results</p>
+            </div>
+          </div>
+          <div class="challenge-item reveal reveal-delay-2">
+            <div class="challenge-number">06</div>
+            <div class="challenge-content glass-card">
+              <h3>Difficulty Detecting Mild Faults</h3>
+              <p>Early-stage faults produced subtle signal changes difficult to distinguish from normal operation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future -->
+    <section class="section section-alt" id="future">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Roadmap</span>
+          <h2 class="section-title">Future <span class="gradient-text">Improvements</span></h2>
+        </div>
+        <div class="future-grid">
+          <article class="future-card glass-card reveal">
+            <span class="future-icon">🔩</span>
+            <h3>Bearing Fault Detection</h3>
+          </article>
+          <article class="future-card glass-card reveal reveal-delay-1">
+            <span class="future-icon">⚖️</span>
+            <h3>Rotor Imbalance Detection</h3>
+          </article>
+          <article class="future-card glass-card reveal reveal-delay-2">
+            <span class="future-icon">📐</span>
+            <h3>Shaft Misalignment Detection</h3>
+          </article>
+          <article class="future-card glass-card reveal">
+            <span class="future-icon">📱</span>
+            <h3>Mobile Dashboard</h3>
+          </article>
+          <article class="future-card glass-card reveal reveal-delay-1">
+            <span class="future-icon">🌐</span>
+            <h3>Web Monitoring System</h3>
+          </article>
+          <article class="future-card glass-card reveal reveal-delay-2">
+            <span class="future-icon">🔔</span>
+            <h3>Real-Time Alerts</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Visuals</span>
+          <h2 class="section-title">Project <span class="gradient-text">Gallery</span></h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" data-caption="Healthy vs Faulty Motor Comparison">
+            <img src="healthy-vs-faulty.jpg" alt="Healthy vs Faulty Motor" loading="lazy">
+            <div class="gallery-overlay"><span>View</span></div>
+          </div>
+          <div class="gallery-item gallery-item-tall reveal reveal-delay-1" data-caption="Hardware Setup">
+            <img src="hardware-setup.jpg" alt="Hardware Setup" loading="lazy">
+            <div class="gallery-overlay"><span>View</span></div>
+          </div>
+          <div class="gallery-item reveal reveal-delay-2" data-caption="System Workflow">
+            <img src="workflow.jpg" alt="System Workflow" loading="lazy">
+            <div class="gallery-overlay"><span>View</span></div>
+          </div>
+          <div class="gallery-item reveal" data-caption="Motor Condition Analysis">
+            <img src="motor-condition.jpg" alt="Motor Condition" loading="lazy">
+            <div class="gallery-overlay"><span>View</span></div>
+          </div>
+          <div class="gallery-item gallery-item-wide reveal reveal-delay-1" data-caption="MATLAB Classification Results">
+            <img src="matlab-result.jpg" alt="MATLAB Results" loading="lazy">
+            <div class="gallery-overlay"><span>View</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <span class="logo-icon">⚡</span>
+            <span>MotorAI</span>
+          </a>
+          <p class="footer-tagline">AI Powered Predictive Maintenance of DC Motor</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Developed By</h4>
+            <ul>
+              <li>Shambhavi Terdal</li>
+              <li>Rida Satkhed</li>
+              <li>Rafa Dange</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Academic</h4>
+            <ul>
+              <li>Mentor: Preethi Baligar</li>
+              <li>B.Tech AIML</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#future">Future</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 AI Powered Predictive Maintenance of DC Motor. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img">
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
